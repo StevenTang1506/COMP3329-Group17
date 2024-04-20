@@ -59,12 +59,14 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
         protected bool m_IsDead;
         protected Task m_DeathTask;
         private float m_GroundedTimer;
+        public AudioClip m_jumpClip;
 
         public float Speed => m_Speed;
         public float JumpForce => m_JumpForce;
         public float JumpFallOff => m_JumpFallOff;
         public float Gravity => m_Gravity;
         public Camera CharacterCamera => m_Camera;
+        public AudioClip jumpClip => m_jumpClip;
 
         public Transform ProjectilesSpawnPoint => m_ProjectilesSpawnPoint;
 
