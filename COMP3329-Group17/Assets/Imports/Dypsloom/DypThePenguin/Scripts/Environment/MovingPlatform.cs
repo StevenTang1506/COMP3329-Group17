@@ -8,6 +8,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Environment {
     using Dypsloom.DypThePenguin.Scripts.Character;
     using Dypsloom.Shared.Utility;
     using System.Collections.Generic;
+    using System.Collections.Specialized;
     using System.ComponentModel;
     using System.Security.Cryptography;
     using UnityEngine;
@@ -171,13 +172,13 @@ namespace Dypsloom.DypThePenguin.Scripts.Environment {
 
             var dir = nextPoint - transform.position;
 
-            if (challengeForLevel2 && transform.position.x > 60 && rand.Next(0, 1000) > 996)
+            if (challengeForLevel2 && transform.position.x > 120)
             {
-                if (coef == 1f && rand.Next(0, 100) > 50)
+                if (coef == 1f && rand.Next(0, 1000) > 994)
                 {
                     coef = 0f;
                 }
-                else
+                else if (coef == 0f && rand.Next(0, 100) > 96)
                 {
                     coef = 1f;
                 }
@@ -185,7 +186,13 @@ namespace Dypsloom.DypThePenguin.Scripts.Environment {
 
             m_Movement = dir.normalized * m_Speed * coef;
 
+            if (challengeForLevel2 && transform.position.x > 168)
+            {
+                m_Movement = dir.normalized * m_Speed * 6f;
+                //transform.Translate(Vector3.down * Time.deltaTime * 1);
+            }
 
+            
         
             transform.Translate(m_Movement* Time.deltaTime);
 
