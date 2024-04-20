@@ -35,6 +35,8 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
         protected const float c_StickyGravity = -0.3f;
         protected const float c_NoVerticalMovementOffset = 0.01f;
 
+        public AudioSource src;
+
         /// <summary>
         /// Constructor.
         /// </summary>
@@ -61,7 +63,10 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
                     m_IsJumping = false;
                 }
 
+                // when jump is initiated
                 if (m_Character.CharacterInput.Jump) {
+
+
                     m_Character.IsGrounded = false;
                     m_IsJumping = true;
                     m_JumpForceMover.StartJump(m_Character.JumpForce, m_Character.JumpFallOff);
