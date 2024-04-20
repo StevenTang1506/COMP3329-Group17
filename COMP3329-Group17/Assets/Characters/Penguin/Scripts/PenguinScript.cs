@@ -20,7 +20,7 @@ public class penguinScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         v= rb.velocity;
         v.x = Input.GetAxis("Horizontal") * 10;
-        v.y = Input.GetAxis("Vertical") * 10;
+        v.y = Input.GetAxis("Vertical") * 20;
         rb.velocity = v;
         /* if (Input.GetKeyDown("space"))
         {

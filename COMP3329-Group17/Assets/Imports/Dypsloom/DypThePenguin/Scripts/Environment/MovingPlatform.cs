@@ -8,6 +8,9 @@ namespace Dypsloom.DypThePenguin.Scripts.Environment {
     using Dypsloom.DypThePenguin.Scripts.Character;
     using Dypsloom.Shared.Utility;
     using System.Collections.Generic;
+    using System.Collections.Specialized;
+    using System.ComponentModel;
+    using System.Security.Cryptography;
     using UnityEngine;
     using CharacterController = UnityEngine.CharacterController;
 
@@ -21,11 +24,15 @@ namespace Dypsloom.DypThePenguin.Scripts.Environment {
         [SerializeField] protected int m_TargetIndex = -1;
         [SerializeField] protected int m_MoveIndex;
         [SerializeField] protected float m_Speed = 1;
+        [SerializeField] protected bool challengeForLevel2 = false;
         [SerializeField] protected Transform[] m_MovePoints;
 
         protected Vector3 m_Movement;
         protected Transform m_CurrentPoint;
         protected Dictionary<Collider, Transform> m_PreviousParents;
+
+        private static System.Random rand = new System.Random();
+        private static float coef = 1;
 
         public Vector3 Movement => m_Movement;
 
@@ -165,7 +172,27 @@ namespace Dypsloom.DypThePenguin.Scripts.Environment {
 
             var dir = nextPoint - transform.position;
 
-            m_Movement = dir.normalized * m_Speed;
+            if (challengeForLevel2 && transform.position.x > 120)
+            {
+                if (coef == 1f && rand.Next(0, 1000) > 994)
+                {
+                    coef = 0f;
+                }
+                else if (coef == 0f && rand.Next(0, 100) > 96)
+                {
+                    coef = 1f;
+                }
+            }
+
+            m_Movement = dir.normalized * m_Speed * coef;
+
+            if (challengeForLevel2 && transform.position.x > 168)
+            {
+                m_Movement = dir.normalized * m_Speed * 6f;
+                //transform.Translate(Vector3.down * Time.deltaTime * 1);
+            }
+
+            
         
             transform.Translate(m_Movement* Time.deltaTime);
 
