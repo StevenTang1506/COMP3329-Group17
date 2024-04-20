@@ -96,6 +96,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
             m_Animator = GetComponent<Animator>();
             m_Inventory = GetComponent<Inventory>();
             m_CharacterDamageable = GetComponent<IDamageable>();
+            m_DeathEffects?.SetActive(false);
 
             AssignCharacterControllers();
         }
