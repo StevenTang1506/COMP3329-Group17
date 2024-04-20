@@ -10033,7 +10033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 2022350702}
   soundSource: {fileID: 608209370}
-  background: {fileID: 8300000, guid: ef8915438ad6a4f7a8e953fb60247c6b, type: 3}
+  background: {fileID: 8300000, guid: 475f4837af487ce4a9e68bb227455e4c, type: 3}
   jump: {fileID: 8300000, guid: ef8915438ad6a4f7a8e953fb60247c6b, type: 3}
 --- !u!4 &1831894600
 Transform:

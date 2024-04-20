@@ -15,4 +15,14 @@ public class AudioManager : MonoBehaviour
         musicSource.clip = background;
         musicSource.Play();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            soundSource.clip = jump;
+            soundSource.Play();
+        }
+
+    }
 }
