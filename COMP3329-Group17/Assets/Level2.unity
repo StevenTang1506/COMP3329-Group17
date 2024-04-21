@@ -2459,8 +2459,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 31642318}
+        m_TargetAssemblyTypeName: Dypsloom.DypThePenguin.Scripts.Game.GameManager,
+          Dypsloom.CharacterController
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -8686,8 +8687,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 31642318}
+        m_TargetAssemblyTypeName: Dypsloom.DypThePenguin.Scripts.Game.GameManager,
+          Dypsloom.CharacterController
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -15253,7 +15255,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 31642318}
         m_TargetAssemblyTypeName: Dypsloom.DypThePenguin.Scripts.Game.GameManager,
           Dypsloom.CharacterController
         m_MethodName: TogglePause
