@@ -3903,7 +3903,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.169
+  m_Volume: 0.101
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10006,7 +10006,7 @@ PrefabInstance:
     - target: {fileID: 406441392843560932, guid: 4290ce8b0eaa54942b193ab7f49c6bb3,
         type: 3}
       propertyPath: m_Speed
-      value: 20
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 406441392843560932, guid: 4290ce8b0eaa54942b193ab7f49c6bb3,
         type: 3}
@@ -12961,7 +12961,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.176
+  m_Volume: 0.091
   m_Pitch: 1
   Loop: 0
   Mute: 0
