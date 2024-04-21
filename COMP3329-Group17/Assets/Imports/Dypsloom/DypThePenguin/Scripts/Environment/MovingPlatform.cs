@@ -31,8 +31,6 @@ namespace Dypsloom.DypThePenguin.Scripts.Environment {
         protected Transform m_CurrentPoint;
         protected Dictionary<Collider, Transform> m_PreviousParents;
 
-        private static System.Random rand = new System.Random();
-        private static float coef = 1;
 
         public Vector3 Movement => m_Movement;
 
@@ -172,19 +170,8 @@ namespace Dypsloom.DypThePenguin.Scripts.Environment {
 
             var dir = nextPoint - transform.position;
 
-            if (challengeForLevel2 && transform.position.x > 120)
-            {
-                if (coef == 1f && rand.Next(0, 1000) > 994)
-                {
-                    coef = 0f;
-                }
-                else if (coef == 0f && rand.Next(0, 100) > 96)
-                {
-                    coef = 1f;
-                }
-            }
 
-            m_Movement = dir.normalized * m_Speed * coef;
+            m_Movement = dir.normalized * m_Speed;
 
             if (challengeForLevel2 && transform.position.x > 168)
             {
