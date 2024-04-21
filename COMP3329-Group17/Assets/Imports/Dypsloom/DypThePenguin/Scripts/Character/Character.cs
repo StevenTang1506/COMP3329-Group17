@@ -12,6 +12,7 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
     using System.Threading.Tasks;
     using UnityEngine;
     using CharacterController = UnityEngine.CharacterController;
+    using UnityEngine.SceneManagement; // Import this for scene management
 
     /// <summary>
     /// The character controller.
@@ -199,10 +200,32 @@ namespace Dypsloom.DypThePenguin.Scripts.Character
             m_DeathEffects?.SetActive(false);
             CharacterAnimator.Die(false);
             m_CharacterDamageable.Heal(int.MaxValue);
-            transform.position = m_SpawnTransform != null ? m_SpawnTransform.position : new Vector3(0,1,0);
+
+            // Find DypSpawnPoint and use its position
+            var spawnPoint = GameObject.Find("DypSpawnPoint");
+            if (spawnPoint != null)
+            {
+                transform.position = spawnPoint.transform.position;
+            }
+            else
+            {
+                // Debug.LogError("DypSpawnPoint not found, using default position.");
+                transform.position = new Vector3(0, 1, 0); // Fallback position
+            }
+
             gameObject.SetActive(true);
             m_IsDead = false;
+
+            // Start coroutine to reload the scene with delay
+            StartCoroutine(ReloadSceneWithDelay(0.5f)); // Delay of 1 seconds
         }
+
+        System.Collections.IEnumerator ReloadSceneWithDelay(float delayInSeconds)
+        {
+            yield return new WaitForSeconds(delayInSeconds); // Wait for the specified delay
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
     }
 }
 
