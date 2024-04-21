@@ -1727,7 +1727,7 @@ Transform:
   m_GameObject: {fileID: 146642017}
   serializedVersion: 2
   m_LocalRotation: {x: 0.08106876, y: 0, z: 0, w: 0.9967085}
-  m_LocalPosition: {x: -16.55302, y: 7.4199753, z: -5.214638}
+  m_LocalPosition: {x: -16.709438, y: 7.4199753, z: -5.214638}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1856,6 +1856,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1411433634}
+    - targetCorrespondingSourceObject: {fileID: 3030399405738875754, guid: 87d291bfe30d9fb4484430a1ead3808c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1411433642}
   m_SourcePrefab: {fileID: 100100000, guid: 87d291bfe30d9fb4484430a1ead3808c, type: 3}
 --- !u!4 &156275398 stripped
 Transform:
@@ -2916,7 +2920,7 @@ Transform:
   m_GameObject: {fileID: 310650101}
   serializedVersion: 2
   m_LocalRotation: {x: 0.08106876, y: 0, z: 0, w: 0.9967085}
-  m_LocalPosition: {x: -16.55302, y: 7.4199753, z: -5.214638}
+  m_LocalPosition: {x: -16.709438, y: 7.4199753, z: -5.214638}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10839,6 +10843,27 @@ MonoBehaviour:
   m_OnUnselect:
     m_PersistentCalls:
       m_Calls: []
+--- !u!65 &1411433642
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411433626}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 2, z: 4}
+  m_Center: {x: 0, y: 1, z: 2}
 --- !u!4 &1414009780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 416924, guid: f6e634a61f76465419469de216a0df0c,
