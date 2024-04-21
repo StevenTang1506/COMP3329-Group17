@@ -7,6 +7,7 @@
 namespace Dypsloom.DypThePenguin.Scripts.Game
 {
     using System;
+    using System.Collections;
     using UnityEngine;
     using UnityEngine.SceneManagement;
 
@@ -117,13 +118,14 @@ namespace Dypsloom.DypThePenguin.Scripts.Game
             m_PauseMenu.SetActive(false);
             m_IsPaused = false;
         }
-        
+
         /// <summary>
         /// Quit game.
         /// </summary>
         public void Quit()
         {
-            Application.Quit();
+            // Load the menu scene instead of quitting the application
+            SceneManager.LoadSceneAsync(0);
         }
     }
 }
